@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.yukselaggoz.todo_list_application.AddNote">
+
+    <TextView
+        android:id="@+id/tv_title_addnote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/et_title_addnote"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/et_title_addnote"
+        android:text="Enter Note Title:" />
+
+    <EditText
+        android:id="@+id/et_title_addnote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_title_addnote"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+
+    <TextView
+        android:id="@+id/tv_note_addnote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/et_title_addnote"
+        android:text="Enter Note:" />
+
+    <LinearLayout
+        android:id="@+id/linear_multi"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_note_addnote"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_note_addnote">
+
+            <EditText
+                android:id="@+id/et_note_addnote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textMultiLine" />
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_back_addnote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="back" />
+
+        <Button
+            android:id="@+id/btn_next_addnote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="next" />
+    </LinearLayout>
+</RelativeLayout>
